@@ -194,3 +194,10 @@ footer{
   .upcoming-release{align-items:flex-start;flex-direction:column;padding:22px}
   .upcoming-action{margin-top:8px}
 }
+
+.portfolio-links{display:flex;gap:18px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.portfolio-links a{font-size:11px;letter-spacing:.14em;border-bottom:1px solid #777;padding-bottom:4px}
+@media(max-width:800px){
+  .portfolio-links{justify-content:flex-start;margin-top:28px}
+  .portfolio-links a{margin-top:0}
+}
