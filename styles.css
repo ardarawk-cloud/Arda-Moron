@@ -168,3 +168,14 @@ footer{
   .hero-stamp{display:none}
   .hero-bottom{margin-top:auto}
 }
+
+.music-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:42px}
+.music-head p{margin:26px 0 0;color:#918c84;font-size:16px}
+.music-head>a{font-size:11px;letter-spacing:.14em;border-bottom:1px solid #777;padding-bottom:4px;white-space:nowrap}
+.spotify-frame{background:#111;border:1px solid #242424;padding:14px}
+.spotify-frame iframe{display:block;border-radius:12px}
+@media(max-width:800px){
+  .music-head{display:block}
+  .music-head>a{display:inline-block;margin-top:28px}
+  .spotify-frame{padding:8px}
+}
