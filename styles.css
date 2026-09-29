@@ -609,3 +609,49 @@ footer{
   .alterego-visuals img:first-child,
   .alterego-visuals img:last-child{aspect-ratio:auto}
 }
+
+
+/* Kamikaze is a secondary alter-ego, not a primary page identity */
+.project-card-kamikaze{
+  min-height:260px;
+}
+.project-kamikaze-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 92px;
+  gap:22px;
+  align-items:end;
+  margin:auto 0 20px;
+}
+.project-card-kamikaze h3{
+  font-size:clamp(38px,4vw,58px);
+  margin:0 0 14px;
+}
+.project-card-kamikaze p{
+  margin:0;
+  font-size:13px;
+  max-width:430px;
+}
+.project-card-kamikaze img{
+  width:92px;
+  height:118px;
+  object-fit:cover;
+  object-position:center;
+  border:1px solid #2a2a2a;
+  filter:saturate(.85) contrast(1.02);
+}
+@media(max-width:800px){
+  .project-card-kamikaze{min-height:220px}
+  .project-kamikaze-row{
+    grid-template-columns:minmax(0,1fr) 76px;
+    gap:16px;
+    margin:42px 0 18px;
+  }
+  .project-card-kamikaze h3{
+    font-size:clamp(36px,11vw,50px);
+    margin:0 0 12px;
+  }
+  .project-card-kamikaze img{
+    width:76px;
+    height:96px;
+  }
+}
