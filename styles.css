@@ -439,3 +439,79 @@ footer{
 .project-card-static{cursor:default}
 .project-card-static:hover h3{color:inherit}
 .project-card-static .project-link{color:#666}
+
+
+/* Gallery final v2 — high-resolution sprite, no scaling blur */
+.gallery-final{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+.gallery-shot{
+  position:relative;
+  margin:0;
+  aspect-ratio:4/5;
+  overflow:hidden;
+  background:#111;
+  border:1px solid #242424;
+}
+.gallery-photo{
+  position:absolute;
+  inset:0;
+  background-image:url("assets/gallery-sprite.webp?v=20260930");
+  background-size:300% 200%;
+  background-repeat:no-repeat;
+}
+.gallery-photo-portrait{background-position:0% 0%}
+.gallery-photo-perform{background-position:50% 0%}
+.gallery-photo-beach{background-position:100% 0%}
+.gallery-photo-lounge{background-position:0% 100%}
+.gallery-photo-flowhouse{background-position:50% 100%}
+.gallery-photo-red{background-position:100% 100%}
+.gallery-shot::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.72) 0%,rgba(0,0,0,.16) 38%,transparent 58%);
+  pointer-events:none;
+}
+.gallery-shot figcaption{
+  position:absolute;
+  left:18px;
+  right:18px;
+  bottom:17px;
+  z-index:2;
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:16px;
+}
+.gallery-shot figcaption span{
+  font-size:9px;
+  letter-spacing:.18em;
+  color:#bbb4aa;
+}
+.gallery-shot figcaption b{
+  font-size:12px;
+  font-weight:500;
+  text-align:right;
+}
+.gallery-media-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:12px;
+}
+.gallery-media-row .gallery-media-link{
+  min-height:220px;
+  grid-column:auto;
+}
+@media(max-width:900px){
+  .gallery-final{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:520px){
+  .gallery-final{grid-template-columns:1fr;gap:10px}
+  .gallery-shot{aspect-ratio:4/5}
+  .gallery-media-row{grid-template-columns:1fr;gap:10px}
+  .gallery-media-row .gallery-media-link{min-height:170px}
+}
