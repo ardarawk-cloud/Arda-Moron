@@ -201,3 +201,15 @@ footer{
   .portfolio-links{justify-content:flex-start;margin-top:28px}
   .portfolio-links a{margin-top:0}
 }
+
+.gallery-card-live img{
+  filter:brightness(2.05) contrast(1.08) saturate(.88);
+  object-position:center 42%;
+}
+.gallery-card-live:hover img{
+  filter:brightness(2.15) contrast(1.06) saturate(1);
+}
+.gallery-card-wide img{
+  filter:brightness(.9) contrast(1.08) saturate(.82);
+  object-position:center;
+}
