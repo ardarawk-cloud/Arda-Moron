@@ -213,3 +213,41 @@ footer{
   filter:brightness(.9) contrast(1.08) saturate(.82);
   object-position:center;
 }
+
+
+/* Gallery mobile rebuild */
+.gallery-tiktok{
+  background:
+    radial-gradient(circle at 78% 20%,rgba(226,42,34,.32),transparent 34%),
+    linear-gradient(135deg,#171717 0%,#0a0a0a 68%);
+}
+.gallery-tiktok::after{background:linear-gradient(to top,rgba(0,0,0,.26),transparent 55%)}
+.tiktok-art{
+  height:100%;padding:28px;display:flex;flex-direction:column;justify-content:space-between;
+}
+.tiktok-art small{font-size:9px;letter-spacing:.2em;color:#aaa49b}
+.tiktok-art strong{
+  font-family:"Instrument Serif",serif;font-weight:400;
+  font-size:clamp(56px,8vw,116px);line-height:.74;letter-spacing:-.055em;color:var(--paper)
+}
+.tiktok-art span{font-size:11px;letter-spacing:.16em;color:var(--red)}
+@media(max-width:800px){
+  .gallery-grid{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto;
+    gap:10px;
+  }
+  .gallery-card,.gallery-card-tall,.gallery-card-live{
+    grid-column:auto;grid-row:auto;aspect-ratio:4/5;
+  }
+  .gallery-card-wide{
+    grid-column:1 / -1;grid-row:auto;aspect-ratio:16/9;
+  }
+  .gallery-card img{filter:saturate(.88) contrast(1.03)}
+  .gallery-card-live img{filter:brightness(.95) contrast(1.08) saturate(.9);object-position:center}
+  .gallery-card figcaption{left:14px;right:14px;bottom:13px;display:block}
+  .gallery-card figcaption span{display:block;margin-bottom:5px}
+  .gallery-card figcaption b{font-size:11px}
+  .tiktok-art{padding:20px}
+  .tiktok-art strong{font-size:clamp(48px,15vw,82px)}
+}
