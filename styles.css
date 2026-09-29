@@ -257,3 +257,81 @@ footer{
 @media(max-width:800px){
   .video-grid{grid-template-columns:1fr;gap:12px}
 }
+
+
+.projects-head{
+  display:grid;
+  grid-template-columns:1fr minmax(280px,430px);
+  gap:50px;
+  align-items:end;
+  margin-bottom:56px;
+}
+.projects-head p{
+  margin:0;
+  color:#918c84;
+  font-size:16px;
+  max-width:430px;
+}
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line);
+}
+.project-card{
+  min-height:320px;
+  padding:28px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  display:flex;
+  flex-direction:column;
+  background:linear-gradient(145deg,#111 0%,#0b0b0b 100%);
+  transition:transform .25s,border-color .25s,background .25s;
+}
+.project-card:hover{
+  transform:translateY(-3px);
+  background:linear-gradient(145deg,#151515 0%,#0d0d0d 100%);
+}
+.project-card-static:hover{transform:none}
+.project-top{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+}
+.project-top span,.project-top b{
+  font-size:9px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.project-top span{color:#807b74}
+.project-top b{color:var(--red);font-weight:700}
+.project-card h3{
+  font-family:"Instrument Serif",serif;
+  font-size:clamp(42px,5vw,74px);
+  line-height:.9;
+  letter-spacing:-.045em;
+  font-weight:400;
+  margin:auto 0 18px;
+}
+.project-card p{
+  color:#918c84;
+  max-width:520px;
+  margin:0 0 28px;
+  font-size:14px;
+}
+.project-link{
+  margin-top:auto;
+  padding-top:18px;
+  border-top:1px solid #252525;
+  font-size:9px;
+  letter-spacing:.15em;
+  color:#b5afa6;
+}
+.project-card:hover h3{color:var(--red)}
+@media(max-width:800px){
+  .projects-head{grid-template-columns:1fr;gap:24px}
+  .project-grid{grid-template-columns:1fr}
+  .project-card{min-height:260px;padding:22px}
+  .project-card h3{font-size:clamp(44px,14vw,68px);margin:54px 0 16px}
+}
