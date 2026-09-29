@@ -251,3 +251,9 @@ footer{
   .tiktok-art{padding:20px}
   .tiktok-art strong{font-size:clamp(48px,15vw,82px)}
 }
+
+
+.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:800px){
+  .video-grid{grid-template-columns:1fr;gap:12px}
+}
