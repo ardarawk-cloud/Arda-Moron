@@ -655,3 +655,19 @@ footer{
     height:96px;
   }
 }
+
+
+.booking-whatsapp{
+  color:var(--paper);
+  font-weight:700;
+  letter-spacing:.04em;
+}
+.booking-whatsapp::before{
+  content:"BOOKING DIRECT · ";
+  color:var(--red);
+  font-size:10px;
+  letter-spacing:.16em;
+}
+.booking-whatsapp:hover{
+  color:var(--red);
+}
